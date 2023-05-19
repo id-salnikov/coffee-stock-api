@@ -1,0 +1,13 @@
+using MediatR;
+
+namespace Coffee.StockApi.Infrastructure.Commands.CreateStockItem;
+
+public class CreateStockItemCommand : IRequest<int>
+{
+    public long Sku { get; init; }
+    public string Name { get; init; }
+    public int StockItemType { get; init; }
+    public int Volume { get; init; }
+    public int Quantity { get; init; }
+    public int MinimalQuantity { get; init; }
+}
